@@ -11,8 +11,8 @@ import { Pipe } from 'angular2/core';
 })
 export class MapToIterable {
     transform(dict: Object): Array<any> {
-        let a = [];
-        for (let key in dict) {
+        var a = [];
+        for (var key in dict) {
             if (dict.hasOwnProperty(key)) {
                 a.push({ key: key, val: dict[key] });
             }
