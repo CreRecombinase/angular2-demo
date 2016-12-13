@@ -6,7 +6,7 @@ export class RsvpModel {
     english: boolean;
     guest: boolean;
     artist: string;
-    song: string
+    song: string;
 
 
 }
