@@ -4,20 +4,20 @@ import { HeaderComponent } from './header/HeaderComponent';
 import { RsvpComponent } from './rsvp/RsvpComponent';
 
 @Component({
-  selector: 'app',
-  directives: [HeaderComponent, ParallaxComponent, RsvpComponent],
-  templateUrl: 'src/app/app.html'
+    selector: 'app',
+    directives: [HeaderComponent, ParallaxComponent, RsvpComponent],
+    templateUrl: 'src/app/app.html'
 })
 export class App {
-  
-  links: string[] = [
-    'Our Story',
-    'When & Where',
-    'Travel & Accommodations',
-    'Registry',
-    'RSVP'
-  ];
 
-  names: string = 'Austin and Heather';
-  
+    links: string[] = [
+        'Our Story',
+        'When & Where',
+        'Travel & Accommodations',
+        'Registry',
+        'RSVP'
+    ];
+
+    names: string = 'Nick and Sofia';
+
 }

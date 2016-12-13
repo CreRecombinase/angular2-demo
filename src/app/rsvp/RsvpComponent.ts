@@ -3,12 +3,12 @@ import { NgForm } from 'angular2/common';
 import { RsvpModel } from './RsvpModel';
 
 @Component({
-  selector: 'rsvp-form',
-  directives: [NgForm],
-  template: `
+    selector: 'rsvp-form',
+    directives: [NgForm],
+    template: `
     <div class="inner">
       <h3>
-        <img src="assets/date.png" />
+        <img src="assets/date.png"/>
         RSVP
       </h3>
       
@@ -25,7 +25,7 @@ import { RsvpModel } from './RsvpModel';
           ngControl="name"  
           #name="ngForm"
           required 
-          placeholder="Name of guest" 
+          placeholder="Your name" 
         />
 
         <input 
@@ -57,14 +57,14 @@ import { RsvpModel } from './RsvpModel';
   `
 })
 export class RsvpComponent {
-  
-  model: RsvpModel = new RsvpModel();
-  submitted: boolean = false;
 
-  onSubmit() { 
-    this.submitted = true;
-    alert('Thanks for letting us know!');
-    console.log('Form Model:', this.model);
-  }
-  
+    model: RsvpModel = new RsvpModel();
+    submitted: boolean = false;
+
+    onSubmit() {
+        this.submitted = true;
+        alert('Thanks for letting us know!');
+        console.log('Form Model:', this.model);
+    }
+
 }
