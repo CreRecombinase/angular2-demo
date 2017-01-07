@@ -30,13 +30,13 @@ import { RsvpModel } from './RsvpModel';
 
         <input 
           type="text" 
-          [hidden]="!model.attending"
-          placeholder="Number of Seats"
-          [(ngModel)]="model.seats"
-          ngControl="seats"  
+          [hidden]="!model.guest"
+          placeholder="Name of guest"
+          [(ngModel)]="model.guestnames"
+          ngControl="guestnames"  
           #seats="ngForm"
         />
-        
+
         <input 
           type="checkbox" 
           id="attending"
@@ -45,7 +45,50 @@ import { RsvpModel } from './RsvpModel';
           #attending="ngForm"
         />
         <label for="attending">Attending</label>
+<br [hidden]="!model.attending">
+
+<input
+          type="checkbox"
+          [hidden]="!model.attending"
+          [(ngModel)]="model.guest"
+          ngControl="guest"
+          #guest="ngForm"
+        />
+        <label [hidden] ="!model.attending" for ="guest">Bringing a Guest?</label>
+<br [hidden]="!model.attending">
+
+
         
+
+<input
+   type = "checkbox"
+   [hidden]="!model.attending"
+   [(ngModel)]="model.songrequest"
+   ngControl="songrequest"
+   #guest="ngForm"
+/>
+<label [hidden] ="!model.attending" for ="songrequest">Have a song request?</label>
+<br [hidden]="!model.attending">
+        <label [hidden] ="!model.songrequest" for ="artist" font-size=20px>I will dance to the beat of </label>
+        <input 
+          type="text" 
+          [hidden]="!model.songrequest"
+          placeholder="Artist"
+          [(ngModel)]="model.artist"
+          ngControl="artist"  
+          #seats="ngForm"
+        />
+
+        <label [hidden] ="!model.songrequest" for ="songrequestsong">by </label>
+        <input 
+          type="text" 
+          [hidden]="!model.songrequest"
+          placeholder="Song"
+          [(ngModel)]="model.song"
+          ngControl="song"  
+          #seats="ngForm"
+        />
+
         <button 
           type="submit" 
           [disabled]="!rsvp.form.valid">

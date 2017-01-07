@@ -1,8 +1,9 @@
 export class RsvpModel {
 
     name: string;
-    seats: number;
+    guestnames: string;
     attending: boolean;
+    songrequest: boolean;
     english: boolean;
     guest: boolean;
     artist: string;
