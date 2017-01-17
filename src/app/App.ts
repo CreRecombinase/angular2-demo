@@ -11,7 +11,7 @@ import { RsvpComponent } from './rsvp/RsvpComponent';
 export class App {
 
     links: string[] = [
-        'Our Story',
+        'We\'re Getting Married!',
         'When & Where',
         'Travel & Accommodations',
         'Registry',
