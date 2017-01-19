@@ -1,52 +1,47 @@
 {
   "name": "angular2-demo",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "engines": {
-    "node": ">=5.5.0"
-  },
-  "scripts": {
-    "setup": "npm install -g browser-sync typescript@1.9.0-dev.20160627-1.0 typings node-sass && typings install",
-    "clean": "rm -rf dist && mkdir dist",
-    "build": "npm run clean && npm run build:ts && npm run build:sass",
-    "build:ts": "tsc",
-    "build:sass": "node-sass -o dist/ src/",
-    "build:css": "postcss --use autoprefixer dist/*.css -d dist/",
-    "watch": "npm run clean && concurrent \"npm run watch:ts\" \"npm run watch:sass\"",
-    "watch:ts": "tsc --watch",
-    "watch:sass": "npm run build:sass && node-sass -o dist/ -w src/",
-    "dev": "concurrent \"npm run watch\" \"browser-sync start --server --files 'dist/**/*.css, index.html, dist/**/*.js'\""
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/amcdnl/angular2-demo.git"
-  },
-  "author": "Austin McDaniel",
+  "version": "0.0.0",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/amcdnl/angular2-demo/issues"
+  "angular-cli": {},
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "lint": "tslint \"src/**/*.ts\" --project src/tsconfig.json --type-check && tslint \"e2e/**/*.ts\" --project e2e/tsconfig.json --type-check",
+    "test": "ng test",
+    "pree2e": "webdriver-manager update --standalone false --gecko false",
+    "e2e": "protractor"
   },
-  "homepage": "https://github.com/amcdnl/angular2-demo#readme",
+  "private": true,
   "dependencies": {
-    "angular2": "2.0.0-beta.8",
-    "es6-shim": "^0.33.3",
-    "reflect-metadata": "0.1.2",
-    "rxjs": "5.0.0-beta.2",
-    "systemjs": "^0.19.17",
-    "zone.js": "0.5.15"
+    "@angular/common": "^2.3.1",
+    "@angular/compiler": "^2.3.1",
+    "@angular/core": "^2.3.1",
+    "@angular/forms": "^2.3.1",
+    "@angular/http": "^2.3.1",
+    "@angular/platform-browser": "^2.3.1",
+    "@angular/platform-browser-dynamic": "^2.3.1",
+    "@angular/router": "^3.3.1",
+    "core-js": "^2.4.1",
+    "rxjs": "^5.0.1",
+    "ts-helpers": "^1.1.1",
+    "zone.js": "^0.7.2"
   },
   "devDependencies": {
-    "@types/es6-shim": "^0.31.2",
-    "@types/node": "0.0.2",
-    "@types/systemjs": "^0.19.32",
-    "autoprefixer": "^6.3.1",
-    "browser-sync": "^2.11.1",
-    "concurrently": "^1.0.0",
-    "flexboxgrid": "^6.3.0",
-    "node-sass": "^3.4.2",
-    "postcss": "^5.0.14",
-    "tslint": "3.4.0-dev.1",
-    "typescript": "1.9.0-dev.20160627-1.0"
+    "@angular/compiler-cli": "^2.3.1",
+    "@types/jasmine": "2.5.38",
+    "@types/node": "^6.0.42",
+    "angular-cli": "1.0.0-beta.25.5",
+    "codelyzer": "~2.0.0-beta.1",
+    "jasmine-core": "2.5.2",
+    "jasmine-spec-reporter": "2.5.0",
+    "karma": "1.2.0",
+    "karma-chrome-launcher": "^2.0.0",
+    "karma-cli": "^1.0.1",
+    "karma-jasmine": "^1.0.2",
+    "karma-remap-istanbul": "^0.2.1",
+    "protractor": "~4.0.13",
+    "ts-node": "1.2.1",
+    "tslint": "^4.3.0",
+    "typescript": "~2.0.3"
   }
 }

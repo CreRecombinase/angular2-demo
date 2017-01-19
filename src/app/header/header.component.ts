@@ -1,37 +1,13 @@
-import { Component, Input, ElementRef } from 'angular2/core';
-import { scrollTo, debounce } from '../../common/utils/utils';
+import { Component, Input, ElementRef, OnInit } from '@angular/core';
+import { scrollTo, debounce } from '../../common/utils/utils'
 
 @Component({
-    selector: 'main-header',
-    template: `
-    <header [class]="headerClass">
-      <div class="inner">
-        <div class="row">
-          <div class="col-md-4">
-            <div class="box"><h1>{{names}}</h1></div>
-          </div>
-          <div class="col-md-8">
-            <div class="box">
-              <nav>
-                <ul>
-                  <li *ngFor="#link of links;#i = index">
-                    <a 
-                      (click)="scrollTo($event, i)" 
-                      [class]="isActive(i)"
-                      href="#">
-                      {{link}}
-                    </a>
-                  </li>
-                </ul>
-              </nav>
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
-  `
+    selector: 'app-header',
+    templateUrl: './header.component.html',
+    styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
+
 
     @Input() names;
     @Input() links;

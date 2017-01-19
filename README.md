@@ -1,51 +1,31 @@
-# Angular2 Demo
+# Angular2Demo
 
-A minimal Angular2 demo site using: 
+This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.25.5.
 
-- TypeScript
-- SystemJS
-- NPM Build
-- SASS
+## Development server
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-You can see the a running demo [here](http://amcdnl.github.io/angular2-demo).
+## Code scaffolding
 
-**NOTE: THIS PROJECT HAS NOT BEEN UPDATED TO NG2 RC5+, THERE ARE SOME MAJOR CHANGES BETWEEN THE VERSION THIS PROJECT USES AND THAT RELEASE. I DO PLAN TO UPDATE TIME PERMITTING.**
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/class/module`.
 
-## Commands
+## Build
 
-command | description
---- | ---
-`npm run setup`| installs globals/etc
-`npm run clean`| clean dist directory
-`npm run build`| clean, ts & sass build
-`npm run build:ts`| typescript build
-`npm run build:sass`| sass build
-`npm run build:css`| postcss build
-`npm run watch`| clean/watch ts & sass
-`npm run watch:ts`| watch typescript
-`npm run watch:sass`| watch sass
-`npm run dev`| build, watch, browsersync
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
 
-## Component Tree
+## Running unit tests
 
-Below outlines a tree of how the components are arranged in the Angular2 component tree.
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-![component tree](http://content.screencast.com/users/amcdaniel22/folders/Snagit/media/1a70d1e6-a97f-4b2a-afcc-562f78979e91/2016-02-25_18-45-09.png)
+## Running end-to-end tests
 
-## File Structure
+Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Before running the tests make sure you are serving the app via `ng serve`.
 
-The folder structure is aimed to encapsulate components into their own modules. In each component folder, it contains all the html, css, js for that component. Components that are not coupled to this application are grouped into a common folder for reuse.
+## Deploying to GitHub Pages
 
-```
-└── src
-    ├── app           -- root     component
-    │   ├── header    -- header   component
-    │   └── rsvp      -- rsvp     component 
-    └── common        -- root     utilities and components that are reusable
-        ├── parallax  -- parallax component
-        └── utils     -- misc     utilities
-```
+Run `ng github-pages:deploy` to deploy to GitHub Pages.
 
-## Credits
+## Further help
 
-The demonstration was a project to learn Angular2 while teaching my [beautiful fiancée](https://www.linkedin.com/in/hpiernick) how to code our wedding website; I hope you enjoy! The project was presented at SFL Code Conference, for slides [click here](http://slides.com/austinmcdaniel/angular-2/).
+To get more help on the `angular-cli` use `ng help` or go check out the [Angular-CLI README](https://github.com/angular/angular-cli/blob/master/README.md).

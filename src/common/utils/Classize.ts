@@ -1,4 +1,4 @@
-import { Pipe } from 'angular2/core';
+import { Pipe } from '@angular/core';
 
 /**
  * Turns a name into a css class
@@ -6,10 +6,10 @@ import { Pipe } from 'angular2/core';
  * @return {[type]}            [description]
  */
 @Pipe({
-  name: 'classize'
+    name: 'classize'
 })
 export class Classize {
-  transform(name: string): string {
-    return name.split(' ').join('');
-  }
+    transform(name: string): string {
+        return name.split(' ').join('');
+    }
 }

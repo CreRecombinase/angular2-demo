@@ -1,0 +1,25 @@
+<app-header [class]="headerClass">
+  <div class="inner">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="box"><h1>{{names}}</h1></div>
+      </div>
+      <div class="col-md-8">
+        <div class="box">
+          <nav>
+            <ul>
+              <li *ngFor="#link of links;#i = index">
+                <a 
+                   (click)="scrollTo($event, i)" 
+                   [class]="isActive(i)"
+                   href="#">
+                  {{link}}
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</app-header>

@@ -1,11 +1,11 @@
-import { Component, ElementRef } from 'angular2/core';
+import { Component, ElementRef } from '@angular/core';
 
 @Component({
     selector: 'parallax',
     template: `
     <div class="bg fadeIn fadeIn-3s fadeIn-Delay-3s" [style.backgroundPosition]="position">
     </div>
-  `
+`
 })
 export class ParallaxComponent {
 
@@ -23,5 +23,6 @@ export class ParallaxComponent {
         let elmTopOffset = this.element.offsetTop;
         this.position = `50% ${(windowYOffset - elmTopOffset) * ParallaxComponent.speed}px`;
     }
+
 
 }
